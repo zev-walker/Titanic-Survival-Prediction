@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble impoirt RandonForestClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import consufion_matrix
 
 
 #Reading the csv file into a variable
@@ -89,3 +90,7 @@ rf_model(X_train, y_train)
 y_pred_rf = rf_model.predict(y_test, y_pred_rf)
 
 accuracu_rf = accuracy_score(y_test, y_pred_rf)
+
+#Confusion Matrices for both models
+confuson_matrix(y_test, y_pred)
+confusion_matrix(y_test, y_pred_rf)
