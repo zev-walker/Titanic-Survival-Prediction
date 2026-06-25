@@ -62,3 +62,11 @@ plt.ylabel("Fare Paid")
 plt.ylim(0, 300)
 plt.show()
 
+#Preparing data for training and testing
+X = titanic.drop("Survved", axis = 1)
+y = titanic["Survived"]
+
+#Splitting data
+X-train, X_test, y_train, y_test = train_test_split(
+  X, y, test_size = 0.2, random_state = 42
+)
